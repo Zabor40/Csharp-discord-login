@@ -30,8 +30,8 @@ namespace Discord_Login
         private void button1_Click(object sender, EventArgs e)
         {
             WebClient w = new WebClient();
-            string whitelist = new System.Net.WebClient() { Proxy = null }.DownloadString("https://pastebin.com/raw/wbPKDbY6");
-            string password = new System.Net.WebClient() { Proxy = null }.DownloadString("https://pastebin.com/raw/3UDPJ1kg");
+            string whitelist =w.DownloadString("");
+            string password = w.DownloadString(");
             if (whitelist.Contains(textBox1.Text) && password.Contains(textBox2.Text))
             {
                 Form2 f2 = new Form2();
