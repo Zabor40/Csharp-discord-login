@@ -1,5 +1,5 @@
 # C# Discord Login
-<img src="https://cdn.discordapp.com/attachments/886672956116308080/930882841208848414/cf0504e36eebf1af13dd61a646c0802b.png" width="100%">
+<img src="https://cdn.discordapp.com/attachments/886672956116308080/930883808427933717/Bez_nazwy-1.png" width="100%">
 
 ## About
 c# discord login panel 
