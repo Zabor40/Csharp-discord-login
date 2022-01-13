@@ -19,5 +19,5 @@ This tool is used for educational purposes only.
 
 e3215#7508</li>
 
-## https://discord.gg/rykajkG9ga
+## 
 <img src="https://raw.githubusercontent.com/Rawiros/Rawiros/main/line.png" width="100%">
