@@ -3,7 +3,6 @@
 
 ## About
 c# discord login panel 
-if u want to use it credit me + dont skid it in 100%
 feel free to use
 
 
