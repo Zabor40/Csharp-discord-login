@@ -40,7 +40,7 @@ namespace Discord_Login
 
             }
             
-           else
+              else
             {
                 label3.ForeColor = Color.Crimson;
                 label4.ForeColor = Color.Crimson;
@@ -49,28 +49,25 @@ namespace Discord_Login
 
 
             }
-            if (textBox1.Text == "")
+
+            if (email == "")
             {
                 label11.Text = "";
                 label4.ForeColor = Color.Silver;
                 label3.ForeColor = Color.Crimson;
                 label10.Text = "- This field is required";
             }
-            if (textBox2.Text == "")
+            if (password == "")
             {
                 label10.Text = "";
                 label3.ForeColor = Color.Silver;
                 label4.ForeColor = Color.Crimson;
                 label11.Text = "- This field is required";
             }
-            if (textBox1.Text == "" && (textBox2.Text == ""))
-            {
-                label3.ForeColor = Color.Crimson;
-                label4.ForeColor = Color.Crimson;
-                label10.Text = "- This field is required";
-                label11.Text = "- This field is required";
-                
-            }
+          
+
+
+        }
 
 
         }
