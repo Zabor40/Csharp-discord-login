@@ -16,17 +16,22 @@ namespace Discord_Login
     {
         public bool mouseDown;
         private Point lastLocation;
+
+
       
        
         public Form1()
         {
             InitializeComponent();
-          
+
+            
+
         }
 
-        
 
-      
+
+
+        
 
 
 
@@ -43,9 +48,12 @@ namespace Discord_Login
 
         }
 
+
+
         private void label5_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox2.Text == "") 
+            string Empty = guna2TextBox1.Text;
+            if (guna2TextBox1.Text == "") 
             {
                 
                 label11.Text = "";
@@ -54,10 +62,13 @@ namespace Discord_Login
                 label10.Text = "- This field is required";
                 guna2TextBox1.BorderColor = Color.Crimson;
             }
-            else
+            else if (Empty.Contains("@"))
             {
-                pictureBox1.Hide();
-            }
+                var form3 = new Form3();
+                form3.Show();
+                this.Hide();
+
+        }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -86,13 +97,16 @@ namespace Discord_Login
             string password = new System.Net.WebClient() { Proxy = null }.DownloadString("https://mojstarytanczy.000webhostapp.com/pass.txt");
             if (email.Contains(whitelist) && pass.Contains(password))
             {
-                Form2 f2 = new Form2();
-                f2.Show();
+                Form2 f = new Form2();
+                f.Show();
                 this.Hide();
+                
 
             }
             else
             {
+                guna2TextBox1.BorderColor = Color.Crimson;
+                guna2TextBox2.BorderColor = Color.Crimson;
                 label3.ForeColor = Color.Crimson;
                 label4.ForeColor = Color.Crimson;
                 label10.Text = "- Login or password is invalid.";
@@ -101,26 +115,42 @@ namespace Discord_Login
 
             }
 
+            string color = "30;30;30";
+
             if (email == "")
             {
+                guna2TextBox2.BorderColor = Color.FromArgb(30, 30, 30);
+                guna2TextBox1.BorderColor = Color.Crimson;
                 label11.Text = "";
                 label4.ForeColor = Color.Silver;
                 label3.ForeColor = Color.Crimson;
                 label10.Text = "- This field is required";
             }
             if (password == "")
+          
             {
+                guna2TextBox1.BorderColor = Color.FromArgb(30, 30, 30);
+                guna2TextBox2.BorderColor = Color.Crimson;
                 label10.Text = "";
                 label3.ForeColor = Color.Silver;
                 label4.ForeColor = Color.Crimson;
                 label11.Text = "- This field is required";
+            }
+            else if(email == "" && password == "")
+            {
+                guna2TextBox1.BorderColor = Color.Crimson;
+              
+                label11.Text = "";
+                label4.ForeColor = Color.Silver;
+                label3.ForeColor = Color.Crimson;
+                label10.Text = "- This field is required";
             }
 
 
 
         }
 
-           
+        
 
         private void Form1_MouseMove_1(object sender, MouseEventArgs e)
         {
@@ -140,6 +170,11 @@ namespace Discord_Login
         {
             mouseDown = true;
             lastLocation = e.Location;
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
         }
     }
