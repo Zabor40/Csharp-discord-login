@@ -93,8 +93,8 @@ namespace Discord_Login
             var email = guna2TextBox1.Text;
             var pass = guna2TextBox2.Text;
             WebClient w = new WebClient();
-            string whitelist = new System.Net.WebClient() { Proxy = null }.DownloadString("https://mojstarytanczy.000webhostapp.com/email.txt");
-            string password = new System.Net.WebClient() { Proxy = null }.DownloadString("https://mojstarytanczy.000webhostapp.com/pass.txt");
+            string whitelist = new System.Net.WebClient() { Proxy = null }.DownloadString("");
+            string password = new System.Net.WebClient() { Proxy = null }.DownloadString("");
             if (email.Contains(whitelist) && pass.Contains(password))
             {
                 Form2 f = new Form2();
